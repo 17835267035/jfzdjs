@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10秒钟倒计时</title>
+</head>
+<body>
+	<span>10</span>秒
+</body>
+<script>
+	
+	
+	function fn(){
+		let spans = document.querySelector('span');
+		if(spans.innerHTML == 0){
+			alert('时间到');
+			return false;
+		}
+		spans.innerHTML = spans.innerHTML*1-1; 
+		
+	}
+	window.setInterval("fn()",1000);
+</script>
+</html>

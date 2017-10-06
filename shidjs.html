@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<span></span>分
+<span></span>秒
+	<script>
+		let spans = document.querySelectorAll('span');
+		setInterval(fn,1000);
+		let after = new Date();
+		after.setMinutes(after.getMinutes()+3);
+		let cha = 2400;
+		function fn(){
+			let arr = [];
+			let now = new Date();
+			// let cha = Math.floor((after.getTime()-now.getTime())/1000);
+			cha--;
+			let min = Math.floor(cha/60);
+			let sec = cha%60;
+			arr.push(min,sec);
+			arr.forEach((element,index)=>{
+				spans[index].innerText = element;
+			})
+		}
+		
+	</script>
+</body>
+</html>
